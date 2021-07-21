@@ -32,10 +32,20 @@ public class Main {
 //		System.out.println(hashSet.toString().replace("[", "").replace("]", "").replace(",", ""));
 		OutputStream output = new FileOutputStream("C:\\\\Users\\\\MZC01-MAKTO\\\\Desktop\\\\Output.txt");
 	    
-		String str =hashSet.toString().replace("[", "").replace("]", "").replace(",", "").replace("\n", "").replace("\n\n", "").replace(" ", "\n").replace("(", "").replace(")", "")
-				.replace("1", "").replace("2", "").replace("3", "").replace("4", "").replace("5", "").replace("6", "").replace("7", "").replace("8", "").replace("9", "").replace("0", "")
-				.replace("%", "").replace("/", "").replace(";", "").replace("?", "").replace(".", "").replace(":", "").replace("–", "").replace("-", "").replace("&", "")
-				.replace("!", "").replace("@", "").replace("#", "").replace("$", "").replace("%", "").replace("^", "").replace("*", "");
+		
+		//최종
+		String str =hashSet.toString().toLowerCase().replaceAll("[^a-z]"," ").replaceAll("\\s+", " ").replace(" ", "\n");
+		
+		
+		//두번째
+//		String str =hashSet.toString().toLowerCase().replaceAll("[A-Z]","").replaceAll("[0-9]","").replaceAll("[ㄱ-힣]","").replaceAll("\\uAC00-\\uD7A3","").replace(" ", "\n");
+
+		
+		//처음
+//		String str =hashSet.toString().replace("[", "").replace("]", "").replace(",", "").replace("\n", "").replace("\n\n", "").replace(" ", "\n").replace("(", "").replace(")", "")
+//				.replace("1", "").replace("2", "").replace("3", "").replace("4", "").replace("5", "").replace("6", "").replace("7", "").replace("8", "").replace("9", "").replace("0", "")
+//				.replace("%", "").replace("/", "").replace(";", "").replace("?", "").replace(".", "").replace(":", "").replace("–", "").replace("-", "").replace("&", "")
+//				.replace("!", "").replace("@", "").replace("#", "").replace("$", "").replace("%", "").replace("^", "").replace("*", "").toLowerCase();
 	    byte[] by=str.getBytes();
 	    output.write(by);
 	}
