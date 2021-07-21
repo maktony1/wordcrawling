@@ -1,14 +1,14 @@
 package wordcrawling;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.StringTokenizer;
+
 
 public class Main {
 	public static void main(String[] args) throws IOException {
@@ -32,8 +32,9 @@ public class Main {
 //		System.out.println(hashSet.toString().replace("[", "").replace("]", "").replace(",", ""));
 		OutputStream output = new FileOutputStream("C:\\\\Users\\\\MZC01-MAKTO\\\\Desktop\\\\Output.txt");
 	    
-		String str =hashSet.toString().replace("[", "").replace("]", "").replace(",", "").replace(" ", "\n").replace("(", "").replace(")", "")
-				.replace("1", "").replace("2", "").replace("3", "").replace("4", "").replace("5", "").replace("6", "").replace("7", "").replace("8", "").replace("9", "").replace("0", "");
+		String str =hashSet.toString().replace("[", "").replace("]", "").replace(",", "").replace("\n", "").replace("\n\n", "").replace(" ", "\n").replace("(", "").replace(")", "")
+				.replace("1", "").replace("2", "").replace("3", "").replace("4", "").replace("5", "").replace("6", "").replace("7", "").replace("8", "").replace("9", "").replace("0", "")
+				.replace("%", "").replace("/", "").replace(";", "").replace("?", "").replace(".", "").replace(":", "").replace("–", "").replace("-", "");
 	    byte[] by=str.getBytes();
 	    output.write(by);
 	}
