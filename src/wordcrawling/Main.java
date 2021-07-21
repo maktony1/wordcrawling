@@ -31,7 +31,8 @@ public class Main {
 		// toString
 //		System.out.println(hashSet.toString().replace("[", "").replace("]", "").replace(",", ""));
 		OutputStream output = new FileOutputStream("C:\\\\Users\\\\MZC01-MAKTO\\\\Desktop\\\\Output.txt");
-	    String str ="오늘 날씨는 아주 좋습니다.";
+	    
+		String str =hashSet.toString().replace("[", "").replace("]", "").replace(",", "").replace(" ", "\n");
 	    byte[] by=str.getBytes();
 	    output.write(by);
 	}
