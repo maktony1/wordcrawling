@@ -34,7 +34,8 @@ public class Main {
 	    
 		String str =hashSet.toString().replace("[", "").replace("]", "").replace(",", "").replace("\n", "").replace("\n\n", "").replace(" ", "\n").replace("(", "").replace(")", "")
 				.replace("1", "").replace("2", "").replace("3", "").replace("4", "").replace("5", "").replace("6", "").replace("7", "").replace("8", "").replace("9", "").replace("0", "")
-				.replace("%", "").replace("/", "").replace(";", "").replace("?", "").replace(".", "").replace(":", "").replace("–", "").replace("-", "");
+				.replace("%", "").replace("/", "").replace(";", "").replace("?", "").replace(".", "").replace(":", "").replace("–", "").replace("-", "").replace("&", "")
+				.replace("!", "").replace("@", "").replace("#", "").replace("$", "").replace("%", "").replace("^", "").replace("*", "");
 	    byte[] by=str.getBytes();
 	    output.write(by);
 	}
